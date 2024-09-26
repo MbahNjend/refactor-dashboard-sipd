@@ -1,0 +1,39 @@
+---
+const provinces = ['25', '50', '75'];
+---
+
+<div
+	class="grid grid-cols-1 gap-4 p-16 pb-5 pt-10 w-full rounded-3xl mx-auto md:grid-cols-2"
+>
+	<!-- Provinsi Dropdown -->
+	<div class="flex items-center gap-12">
+		<div class="flex items-center gap-3">
+			<label for="show" class="block text-lg font-normal dark:text-gray-200">
+				Show
+			</label>
+			<select
+				id="provinsi"
+				class="w-36 px-4 py-2 border dark:border-none dark:text-gray-200 border-neutral-50 rounded-lg bg-[#f2f7f8] dark:bg-[#1f1e25] focus:outline-none focus:ring-0 focus:border-transparent"
+			>
+				<option value="" disabled selected>100</option>
+				{
+					provinces.map((province) => (
+						<option value={province}>{province}</option>
+					))
+				}
+			</select>
+			<label for="entries" class="dark:text-neutral-300">entries</label>
+		</div>
+		<div>
+			<label for="value output" class="dark:text-neutral-300">Showing 0 to 0 of 0 entries</label>
+		</div>
+	</div>
+</div>
+
+<style>
+	@media (max-width: 768px) {
+		.grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

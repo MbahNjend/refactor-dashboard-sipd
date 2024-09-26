@@ -5,16 +5,19 @@ const sources = ['Sumberdana 1', 'Sumberdana 2', 'Sumberdana 3'];
 ---
 
 <div
-	class="grid grid-cols-1 gap-4 p-16 pt-10 pb-10 bg-white w-full rounded-3xl mx-auto md:grid-cols-2"
+	class="grid grid-cols-1 gap-4 p-16 pt-10 pb-10 bg-white dark:bg-[#151419] w-full rounded-3xl mx-auto md:grid-cols-2"
 >
 	<!-- Provinsi Dropdown -->
 	<div class="flex-1">
-		<label for="provinsi" class="block mb-2 text-sm font-medium text-gray-700">
+		<label
+			for="provinsi"
+			class="block mb-2 text-lg font-normal dark:text-gray-200"
+		>
 			Provinsi
 		</label>
 		<select
 			id="provinsi"
-			class="w-full p-2 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:border-blue-500"
+			class="w-full p-4 border dark:border-none dark:text-gray-200 border-neutral-50 rounded-lg bg-[#f2f7f8] dark:bg-[#1f1e25] focus:outline-none focus:ring-0 focus:border-transparent"
 		>
 			<option value="" disabled selected>- Belum Memilih -</option>
 			{
@@ -27,12 +30,12 @@ const sources = ['Sumberdana 1', 'Sumberdana 2', 'Sumberdana 3'];
 
 	<!-- Kab/Kota Dropdown -->
 	<div class="flex-1">
-		<label for="city" class="block mb-2 text-sm font-medium text-gray-700">
+		<label for="city" class="block mb-2 text-lg font-normal dark:text-gray-200">
 			Kab / Kota
 		</label>
 		<select
 			id="city"
-			class="w-full p-2 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:border-blue-500"
+			class="w-full p-4 border dark:border-none dark:text-gray-200 border-neutral-50 rounded-lg bg-[#f2f7f8] dark:bg-[#1f1e25] focus:outline-none focus:ring-0 focus:border-transparent"
 		>
 			<option value="" disabled selected>- Belum Memilih -</option>
 			{cities.map((city) => <option value={city}>{city}</option>)}
@@ -40,13 +43,16 @@ const sources = ['Sumberdana 1', 'Sumberdana 2', 'Sumberdana 3'];
 	</div>
 
 	<!-- Sumberdana Dropdown (Full width) -->
-	<div class="col-span-2">
-		<label for="source" class="block mb-2 text-sm font-medium text-gray-700">
+	<div class="col-span-2 mt-3">
+		<label
+			for="source"
+			class="block mb-2 text-lg font-normal dark:text-gray-200"
+		>
 			Pilih Sumberdana
 		</label>
 		<select
 			id="source"
-			class="w-full p-2 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:border-blue-500"
+			class="w-full p-4 border dark:border-none dark:text-gray-200 border-neutral-50 rounded-lg bg-[#f2f7f8] dark:bg-[#1f1e25] focus:outline-none focus:ring-0 focus:border-transparent"
 		>
 			<option value="" disabled selected>- Belum Memilih -</option>
 			{sources.map((source) => <option value={source}>{source}</option>)}
@@ -54,16 +60,16 @@ const sources = ['Sumberdana 1', 'Sumberdana 2', 'Sumberdana 3'];
 	</div>
 
 	<!-- Apply Button -->
-	<div class="col-span-2 flex justify-end">
+	<div class="col-span-2 mt-4 flex justify-end">
 		<button
-			class="px-4 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition"
+			class="px-6 py-2 text-white hover:scale-95 duration-150 bg-blue-500 hover:bg-blue-600 rounded-lg transition"
 		>
 			Terapkan
 		</button>
 	</div>
 </div>
 
-<style global>
+<style>
 	@media (max-width: 768px) {
 		.grid {
 			grid-template-columns: 1fr;
