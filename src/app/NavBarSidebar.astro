@@ -2,6 +2,7 @@
 /* eslint max-lines: 'off' */
 
 import { url } from '../lib/data.js';
+import SipdLogo from '../assets/siped.svg';
 ---
 
 <nav
@@ -41,11 +42,7 @@ import { url } from '../lib/data.js';
 				</button>
 				<a href={url('')} class="flex items-center lg:mr-16 gap-1 lg:gap-2">
 					<!-- sipd logo -->
-					<img
-						src="https://sipd.go.id/run2/assets/logo.png"
-						width="50"
-						alt=""
-					/>
+					<img src={SipdLogo} alt="" />
 					<span
 						class="self-center text-2xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
 						>SIPD</span

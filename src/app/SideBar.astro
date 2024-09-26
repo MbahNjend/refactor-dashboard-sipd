@@ -12,7 +12,7 @@ import ColorModeSwitcher from '../components/ColorModeSwitcher.astro';
 	aria-label="Sidebar"
 >
 	<div
-		class="relative flex flex-col flex-1 min-h-0 pt-0 bg-white border-gray-200 dark:bg-[#0c0b10] dark:border-gray-700"
+		class="relative flex flex-col flex-1 min-h-full pt-0 bg-white border-gray-200 dark:bg-[#0c0b10] dark:border-gray-700"
 	>
 		<div
 			class:list={[
@@ -26,34 +26,6 @@ import ColorModeSwitcher from '../components/ColorModeSwitcher.astro';
 				class="flex-1 px-3 space-y-1 bg-white divide-y divide-gray-200 dark:bg-[#0c0b10] dark:divide-gray-700"
 			>
 				<ul class="pb-2 space-y-2">
-					<li>
-						<form action="#" method="GET" class="lg:hidden">
-							<label for="mobile-search" class="sr-only">Search</label>
-							<div class="relative">
-								<div
-									class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-								>
-									<svg
-										class="w-5 h-5 text-gray-500"
-										fill="currentColor"
-										viewBox="0 0 20 20"
-										xmlns="http://www.w3.org/2000/svg"
-										><path
-											fill-rule="evenodd"
-											d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-											clip-rule="evenodd"></path></svg
-									>
-								</div>
-								<input
-									type="text"
-									name="email"
-									id="mobile-search"
-									class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-200 dark:focus:ring-primary-500 dark:focus:border-primary-500"
-									placeholder="Search"
-								/>
-							</div>
-						</form>
-					</li>
 					<li>
 						<h1 class="dark:text-neutral-200 mb-5 mt-5">MENU UTAMA</h1>
 						<a
@@ -133,7 +105,7 @@ import ColorModeSwitcher from '../components/ColorModeSwitcher.astro';
 							</li>
 							<li>
 								<a
-									href={url('layouts/sidebar')}
+									href={url('layouts/SumberPendanaan')}
 									class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
 									>Sumber Pendanaan</a
 								>

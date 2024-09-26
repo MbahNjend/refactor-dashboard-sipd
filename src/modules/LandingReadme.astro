@@ -3,29 +3,22 @@ import DropdownYears from './LandingReadme/DropdownYears.astro';
 import CardCols from './LandingReadme/CardCols.astro';
 ---
 
-<section>
-	<main class="p-5 mt-20 lg:mt-0">
-		<!-- heading -->
-		<header>
-			<div class="justify-between flex items-center">
-				<h1 class="text-normal dark:text-neutral-200 text-2xl">Dashboard</h1>
-				<!-- dropdown years components -->
-				<DropdownYears />
-			</div>
-		</header>
-	</main>
-</section>
-
-<section>
-	<div class="big-label p-5 pt-0 pb-0">
-		<div class="bg-[#ccecfe] px-8 flex rounded gap-1 p-5">
-			<p class="font-light">
-				Posisi Per-provinsi-tahun: <h1 class="font-semibold">2025</h1>
-			</p>
+<main class="p-5 mt-20 lg:mt-0">
+	<!-- heading -->
+	<header>
+		<div class="justify-between flex items-center">
+			<h1 class="text-normal dark:text-neutral-200 text-2xl">Dashboard</h1>
+			<!-- dropdown years components -->
+			<DropdownYears />
 		</div>
-	</div>
-</section>
+	</header>
+</main>
 
-<section>
-	<CardCols />
-</section>
+<div class="big-label p-5 pt-0 pb-0">
+	<div class="bg-[#ccecfe] px-8 flex rounded gap-1 p-5">
+		<p class="font-light">
+			Posisi Per-provinsi-tahun: <h1 class="font-semibold">2025</h1>
+		</p>
+	</div>
+</div>
+<CardCols />
