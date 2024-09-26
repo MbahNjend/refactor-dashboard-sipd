@@ -15,6 +15,7 @@ export interface Product {
 	discount: string;
 }
 
+
 export type Users = User[];
 export interface User {
 	id: number;
