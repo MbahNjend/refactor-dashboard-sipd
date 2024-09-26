@@ -22,20 +22,28 @@
 </style>
 
 <script>
-	// @ts-ignore
-	const confettiElement = document.querySelector('#confettis');
-	const triggerConfettis = document.querySelector('[data-trigger-confettis]');
+	// Wait until the DOM content is fully loaded
+	document.addEventListener('DOMContentLoaded', () => {
+		const confettiElement = document.querySelector('#confettis');
+		const triggerConfettis = document.querySelector('[data-trigger-confettis]');
 
-	triggerConfettis.addEventListener('click', popIt);
+		if (confettiElement && triggerConfettis) {
+			// Add click event listener
+			triggerConfettis.addEventListener('click', popIt);
 
-	function popIt() {
-		const confettiSettings = {
-			target: confettiElement,
-			start_from_edge: true,
-		};
-		const confetti = new ConfettiGenerator(confettiSettings);
-		confetti.render();
-	}
+			function popIt() {
+				const confettiSettings = {
+					target: confettiElement,
+					start_from_edge: true,
+				};
+				// Initialize and render confetti
+				const confetti = new ConfettiGenerator(confettiSettings);
+				confetti.render();
+			}
+		} else {
+			console.error('Confetti element or trigger element not found');
+		}
 
-	console.log('Pop 🎉!');
+		console.log('Pop 🎉!');
+	});
 </script>
