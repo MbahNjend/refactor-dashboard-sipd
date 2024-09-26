@@ -1,5 +1,5 @@
 ---
-import FooterSidebar from './FooterSidebar.astro';
+// import FooterSidebar from './FooterSidebar.astro';
 import LayoutCommon from './LayoutCommon.astro';
 import NavBarSidebar from './NavBarSidebar.astro';
 import SideBar from './SideBar.astro';
@@ -10,14 +10,14 @@ import SideBar from './SideBar.astro';
 
 	<SideBar />
 
-	<div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+	<div class="flex pt-1 overflow-hidden bg-gray-50 dark:bg-[#1f1e25]">
 		<div
 			id="main-content"
-			class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900 min-h-screen"
+			class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-[#1f1e25] min-h-screen"
 		>
 			<slot />
 
-			<FooterSidebar />
+			<!-- <FooterSidebar /> -->
 		</div>
 	</div>
 </LayoutCommon>
