@@ -1,0 +1,35 @@
+---
+import { url } from "../../lib/data"
+
+---
+
+<nav aria-label="breadcrumb" class="w-full mb-10 dark:text-gray-800">
+	<ol class="flex mt-3 space-x-2 dark:text-gray-800">
+		<li class="flex items-center">
+			<a
+				rel="noopener noreferrer"
+				href={url('')}
+				title="Back to homepage"
+				class="flex items-center text-blue-500 hover:underline">Dashboard</a
+			>
+		</li>
+		<li class="flex items-center space-x-1">
+			<span class="dark:text-gray-600">/</span>
+			<a
+				rel="noopener noreferrer"
+				href="#"
+				class="flex items-center px-1 capitalize text-blue-500 hover:underline"
+				>Informasi Pembangunan Daerah</a
+			>
+		</li>
+		<li class="flex items-center space-x-1">
+			<span class="dark:text-gray-600">/</span>
+			<a
+				rel="noopener noreferrer"
+				href="#"
+				class="flex items-center px-1 capitalize text-neutral-400 hover:underline"
+				>Sumber Pendanaan</a
+			>
+		</li>
+	</ol>
+</nav>

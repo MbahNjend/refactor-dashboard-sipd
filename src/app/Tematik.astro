@@ -1,31 +1,27 @@
 ---
-import BreadCrumb from './component/BreadCrumb.astro';
-import DropdownYears from '../modules/LandingReadme/DropdownYears.astro';
-import TripleDropdown from './component/TripleDropDown.astro';
-
 import ShowEntries from './component/ShowEntries.astro';
-
-// import Table Components
-import TableHeadSP from './Table/TableHeadSP.astro';
+import DropDownYears from '../app/component/DropdownYears.astro';
+import BreadCrumb from './component/BreadCrumb.astro';
+import TableHeadTematik from '../app/Table/TableHeadTematik.astro';
 ---
 
-<main>
-	<div class="p-5 mt-20 lg:mt-0">
-		<div class="justify-between flex items-center">
-			<h1 class="text-normal dark:text-neutral-200 text-2xl">Dashboard</h1>
-			<DropdownYears />
+<main class="p-5">
+	<div class="flex items-start justify-between">
+		<div class="grid">
+			<h1 class="text-normal dark:text-neutral-200 text-2xl">Tematik</h1>
+			<BreadCrumb />
 		</div>
-		<!-- for breadcrumb -->
-		<BreadCrumb />
-		<TripleDropdown />
+		<div>
+			<DropDownYears />
+		</div>
+	</div>
 
-		<div class="bg-white rounded-3xl dark:bg-[#151419]">
-			<div class="mt-5">
-				<ShowEntries />
-			</div>
+	<div class="bg-white rounded-3xl dark:bg-[#151419]">
+		<ShowEntries />
+		<div>
 			<table class="min-w-full mt-5">
 				<!-- for thead -->
-				<TableHeadSP />
+				<TableHeadTematik />
 				<tbody class="p-10">
 					<tr>
 						<td class="p-4 text-sm text-gray-900 dark:text-white">1</td>
@@ -40,6 +36,8 @@ import TableHeadSP from './Table/TableHeadSP.astro';
 						<td class="p-4 text-sm text-gray-900 dark:text-white"
 							>111.222.333.444.555</td
 						>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">Aceh Kota</td>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">10%</td>
 					</tr>
 					<tr>
 						<td class="p-4 text-sm text-gray-900 dark:text-white">2</td>
@@ -54,6 +52,8 @@ import TableHeadSP from './Table/TableHeadSP.astro';
 						<td class="p-4 text-sm text-gray-900 dark:text-white"
 							>110.220.330.440.550</td
 						>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">Papua Kota</td>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">10%</td>
 					</tr>
 					<tr>
 						<td class="p-4 text-sm text-gray-900 dark:text-white">3</td>
@@ -68,6 +68,8 @@ import TableHeadSP from './Table/TableHeadSP.astro';
 						<td class="p-4 text-sm text-gray-900 dark:text-white"
 							>22.000.564.211.000</td
 						>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">Aceh Kota</td>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">10%</td>
 					</tr>
 					<tr>
 						<td class="p-4 text-sm text-gray-900 dark:text-white">4</td>
@@ -82,6 +84,8 @@ import TableHeadSP from './Table/TableHeadSP.astro';
 						<td class="p-4 text-sm text-gray-900 dark:text-white"
 							>300.545.665.589.000</td
 						>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">Aceh Kota</td>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">10%</td>
 					</tr>
 					<tr>
 						<td class="p-4 text-sm text-gray-900 dark:text-white">5</td>
@@ -95,14 +99,12 @@ import TableHeadSP from './Table/TableHeadSP.astro';
 						<td class="p-4 text-sm text-gray-900 dark:text-white"
 							>245.795.336.126.565</td
 						>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">Aceh Kota</td>
+						<td class="p-4 text-sm text-gray-900 dark:text-white">10%</td>
 					</tr>
+					
 				</tbody>
 			</table>
-			<p
-				class="text-sm text-start p-5 pt-1 text-gray-500 mt-10 dark:text-white"
-			>
-				Data Update: 17 agustus 2024
-			</p>
 		</div>
 	</div>
 </main>
